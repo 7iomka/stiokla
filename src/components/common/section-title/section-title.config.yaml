@@ -1,0 +1,9 @@
+title: section-title
+variants:
+  - name: default
+    context:
+      title: Заголовок секции
+  - name: filled_primary
+    context:
+      title: Заголовок секции
+      mods: [filled_primary]

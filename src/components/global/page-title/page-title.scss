@@ -1,0 +1,25 @@
+/**
+ * Mixin defined in section-title
+ */
+
+@include blockTitle('page');
+
+.page-title {
+  font-weight: bold;
+  font-size: 34px;
+  @include media(">=md") {
+    font-size: 42px;
+  };
+  @include media(">=lg") {
+    font-size: 50px;
+  };
+}
+.page-title--home {
+  font-weight: normal;
+}
+.page-title--dealers {
+  margin-bottom: 10px;
+  @include media(">=lg"){
+    margin-bottom: 0;
+  };
+}

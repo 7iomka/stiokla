@@ -1,0 +1,46 @@
+@mixin blockTitle($prefix) {
+  .#{$prefix}-title-area {
+
+  }
+  .#{$prefix}-title {
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1;
+    margin: 36px 0;
+    @include media(">=md") {
+      font-size: 36px;
+    };
+    @include media(">=lg") {
+      font-size: 50px;
+      margin: 50px 0;
+    };
+  }
+}
+
+@include blockTitle('section');
+
+/** mods **/
+
+// Filled primary
+
+.section-title-area--filled_primary {
+  text-align: center;
+}
+.section-title--filled_primary {
+  font-size: 25px;
+  margin: 10px 0;
+  @include media(">=md") {
+    font-size: 29px;
+    margin: 12px 0;
+  };
+  @include media(">=lg") {
+    font-size: 35px;
+    margin: 35px 0;
+  };
+  color: white;
+  background-color: palette(primary);
+  padding: 10px 15px;
+  display: inline-block;
+}

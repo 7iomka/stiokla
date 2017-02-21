@@ -1,0 +1,125 @@
+/**
+ * General styles for news item
+*/
+/** news-item **/
+
+.news-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 60px;
+  @include media(">=sm") {
+    margin: 0;
+  };
+
+  &__header {
+      @include media(">=md") {
+        flex: 0 0 auto;
+      };
+  }
+  &__body {
+      @include media(">=md") {
+        padding-left: 28px;
+        flex: 1;
+      };
+  }
+
+  &__title {
+      font-weight: bold;
+      color: black;
+  }
+
+  &__date {
+      font-size: 11px;
+      line-height: 15px;
+      margin: 13px 0 20px;
+  }
+  &__anonce {
+      font-size: 15px;
+      line-height: 1;
+  }
+
+  &__readmore {
+      margin-top: 17px;
+      display: block;
+      text-decoration: underline;
+  }
+}
+
+/**
+ * Slider version
+ */
+
+ .news-list--slider {
+     padding-bottom: 50px;
+     .swiper-pagination-bullet {
+         width: 12px;
+         height: 12px;
+     }
+
+    @include media(">=sm") {
+      .swiper-button-next, .swiper-button-prev {
+        display: none;
+      }
+    };
+    @include media(">=lg") {
+      .swiper-pagination {
+        display: none;
+      }
+    };
+ }
+
+ /**
+  * Verical version
+  */
+.news-list--vertical {
+  .list-group__item-figure {
+      border: 1px solid #ccc;
+  }
+   .news-item {
+     padding: 23px;
+     border: 1px solid #e8e8e8;
+     margin: 0 0 12px 0;
+
+     &__anonce {
+         margin-top: 20px;
+     }
+
+     &__date {
+        font-size: 15px;
+        line-height: 25px;
+        @include media(">=sm") {
+          position: absolute;
+          right: 0;
+          top: 0;
+          margin: 0;
+        };
+     }
+
+     &__title {
+         @include media(">=sm") {
+           margin-right: 88px;
+          display: block;
+         }
+     }
+
+     &__body {
+         position: relative;
+         @include media(">=sm") {
+           padding-left: 28px;
+           flex: 1;
+         };
+     }
+
+     &__header {
+         @include media(">=sm") {
+           flex: 0 0 auto;
+         };
+     }
+
+     &__readmore {
+       font-size: 15px;
+     }
+   }
+
+
+}

@@ -1,0 +1,271 @@
+.list-group__item {
+  &-figure {
+    text-align: center;
+    margin-bottom: 30px;
+
+  }
+
+  &-image {
+    max-width: 100%;
+  }
+
+  &-label {
+    text-align: center;
+    font-size: 18px;
+    line-height: (20/18)+em;
+  }
+
+
+
+  /**
+   * with border-gradient
+   */
+   &--with-border-gradient {
+     @include border-gradient($base-color--secondary, $base-color--primary,6px,vertical);
+     /**
+      * need flex-wrap
+      */
+      flex-wrap: wrap;
+   }
+
+}
+/** modifiactors **/
+
+.list-group__item--only-caption_extended {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  /**bem**/
+  .list-group__item {
+    &-figure {
+      margin: 32px;
+    }
+    &-caption {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-self: center;
+    // top
+    &-top {
+      color:  #282828;
+      font-size: 18px;
+      align-self: center;
+    }
+    // body
+    &-body {
+      &--font-gradient {
+        @include font-gradient($base-color--primary,$base-color--secondary,235deg,$base-color--primary,0%,73%);
+      }
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 16px 0;
+      align-self: center;
+    }
+    // bottom
+      &-bottom {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: (20/18)+em;
+      }
+    }
+  }
+}
+
+/** product **/
+.list-group__item--product {
+  margin-bottom: 45px;
+  &:hover {
+    .list-group__item-link {
+      color: $color-link--hover;
+    }
+  }
+  /** bem **/
+  .list-group__item {
+
+      &-link {
+        display: block;
+        text-align: center;
+        font-weight: 700;
+        color: inherit;
+          &:hover {
+            color: $color-link--hover;
+          }
+          /**modificators**/
+          /**
+           * colored  / underlined
+          */
+          &--underlined {
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          &--colored {
+            color: palette(primary);
+          }
+      }
+
+      &-label {
+        /**modificators**/
+        /**
+         * big
+        */
+        &--big {
+          font-size: 25px;
+        }
+
+      }
+
+      &-priceListLink {
+          text-align: center;
+          display: block;
+          margin-top: 15px;
+          font-size: 15px;
+          text-decoration: underline;
+      }
+  }
+}
+
+.list-group__item--certificat {
+  @extend .list-group__item--product;
+  /** BEM **/
+  .list-group__item {
+    &-figure {
+      margin-bottom: 15px;
+    }
+    &-image {
+      border: 4px solid #cccccc;
+    }
+    &-link {
+      font-weight: normal;
+      line-height: 1em;
+    }
+    &-label {
+      font-size: 15px;
+      line-height: 1em;
+    }
+  }
+}
+/**
+ * with square backdrop *
+ */
+.list-group__item--with-square-backdrop {
+  .list-group__item-caption {
+    justify-content: flex-start;
+    align-items: flex-start;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      height: 100px;
+      background: url(assets/images/icons/square-black.png);
+    }
+  }
+  /** if this has layout with only caption extended **/
+  &.list-group__item--only-caption_extended {
+    justify-content: flex-start;
+    margin: 30px 0;
+    /**bem**/
+    .list-group__item {
+      &-caption {
+        display: block;
+        position: relative;
+      }
+      &-figure {
+        width: 140px;
+        margin: 0 18px 0 0;
+      }
+      &-caption-body {
+        text-align: center;
+        width: 140px;
+        font-size: 80px;
+        position: relative;
+      }
+      &-label {
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+
+  }
+
+}
+
+/** product horizontal **/
+
+.list-group__item--product-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @include media(">=sm") {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    };
+    @include media(">=md", "<lg") {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+
+
+    /** bem **/
+    .list-group__item {
+      &-figure {
+        flex: 0 0 100%;
+        @include media(">=sm") {
+          margin-bottom: 0;
+          flex: 0 0 auto;
+        };
+        @include media(">=lg") {
+          max-width: 100px;
+        };
+
+      }
+      &-link {
+        text-align: center;
+        color: $color-link;
+        font-size: 16px;
+        line-height: 1.125em;
+        &:hover {
+          text-decoration: underline;
+        }
+        @include media(">=sm") {
+          margin-left: 15px;
+          text-align: left;
+        };
+        @include media(">=md", "<lg") {
+          margin-left: 0;
+          margin-top: 15px;
+          text-align: center;
+        }
+
+      }
+      &-label {
+        font-size: inherit;
+        font-weight: normal;
+      }
+    }
+
+
+}
+
+/** partner **/
+.list-group__item--partner {
+  /** bem **/
+  .list-group__item {
+    &-figure {
+      margin-bottom: 0;
+    }
+  }
+
+}

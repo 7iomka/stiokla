@@ -1,0 +1,9 @@
+# Folders
+node_modules
+www
+tmp
+mandelbrot-custom
+
+# Files
+.DS_Store
+.publish
