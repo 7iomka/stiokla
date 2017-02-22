@@ -208,10 +208,10 @@ $grid-breakpoints: (
 // ) !default;
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
 $container-max-widths: (
-  sm: 1170px,
-  md: 1170px,
-  lg: 1170px,
-  xl: 1170px
+  sm: 960px,
+  md: 960px,
+  lg: 960px,
+  xl: 960px
 ) !default;
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
 

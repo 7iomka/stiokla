@@ -2,41 +2,110 @@
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
 $fonts-base-path: '../fonts/';
-@font-face {
-  font-family: 'Proxima_Nova';
-    src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.eot');
-    src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.eot?#iefix') format('embedded-opentype'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.woff2') format('woff2'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.woff') format('woff'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.ttf') format('truetype'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.svg#proxima_nova_rgregular') format('svg');
-    font-weight: 400;
-    font-style: normal
+
+@function font($path) {
+  @return url($fonts-base-path + $path);
 }
 
+// AN BOLD
 @font-face {
-  font-family: 'Proxima_Nova';
-    src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.eot');
-    src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.eot?#iefix') format('embedded-opentype'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.woff2') format('woff2'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.woff') format('woff'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.ttf') format('truetype'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.svg#proxima_nova_rgbold') format('svg');
+    font-family:'AN';
+    src: font('AN/AN_Bold.eot');
+	src: font('AN/AN_Bold.eot?#iefix') format('embedded-opentype'),
+		font('AN/AN_Bold.woff2') format('woff2'),
+		font('AN/AN_Bold.woff') format('woff'),
+		font('AN/AN_Bold.ttf') format('truetype'),
+		font('AN/AN_Bold.otf') format('opentype'),
+		font('AN/AN_Bold.svg#AN_Bold') format('svg');
     font-weight: 700;
-    font-style: normal
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0-10FFFF;
 }
 
+// AN HEAVY
 @font-face {
-  font-family: 'Proxima_Nova';
-    src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.eot');
-    src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.eot?#iefix') format('embedded-opentype'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.woff2') format('woff2'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.woff') format('woff'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.ttf') format('truetype'),
-    url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.svg#proxima_nova_thextrabold') format('svg');
+    font-family:'AN';
+    src: font('AN/AN_Heavy.eot');
+	src: font('AN/AN_Heavy.eot?#iefix') format('embedded-opentype'),
+		font('AN/AN_Heavy.woff2') format('woff2'),
+		font('AN/AN_Heavy.woff') format('woff'),
+		font('AN/AN_Heavy.ttf') format('truetype'),
+		font('AN/AN_Heavy.otf') format('opentype'),
+		font('AN/AN_Heavy.svg#AN_Heavy') format('svg');
     font-weight: 900;
-    font-style: normal
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0-10FFFF;
 }
+
+// AR MEDIUM
+@font-face {
+    font-family:'AN';
+    src: font('AN/AN_Medium.eot');
+	src: font('AN/AN_Medium.eot?#iefix') format('embedded-opentype'),
+		font('AN/AN_Medium.woff2') format('woff2'),
+		font('AN/AN_Medium.woff') format('woff'),
+		font('AN/AN_Medium.ttf') format('truetype'),
+		font('AN/AN_Medium.otf') format('opentype'),
+		font('AN/AN_Medium.svg#AN_Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0-10FFFF;
+}
+
+// AR REGULAR
+@font-face {
+    font-family:'AN';
+    src: font('AN/AN_Regular.eot');
+	src: font('AN/AN_Regular.eot?#iefix') format('embedded-opentype'),
+		font('AN/AN_Regular.woff2') format('woff2'),
+		font('AN/AN_Regular.woff') format('woff'),
+		font('AN/AN_Regular.ttf') format('truetype'),
+		font('AN/AN_Regular.otf') format('opentype'),
+		font('AN/AN_Regular.svg#AN_Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0-10FFFF;
+}
+
+// @font-face {
+//   font-family: 'Proxima_Nova';
+//     src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.eot');
+//     src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.eot?#iefix') format('embedded-opentype'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.woff2') format('woff2'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.woff') format('woff'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.ttf') format('truetype'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_regular.svg#proxima_nova_rgregular') format('svg');
+//     font-weight: 400;
+//     font-style: normal
+// }
+//
+// @font-face {
+//   font-family: 'Proxima_Nova';
+//     src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.eot');
+//     src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.eot?#iefix') format('embedded-opentype'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.woff2') format('woff2'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.woff') format('woff'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.ttf') format('truetype'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_bold.svg#proxima_nova_rgbold') format('svg');
+//     font-weight: 700;
+//     font-style: normal
+// }
+//
+// @font-face {
+//   font-family: 'Proxima_Nova';
+//     src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.eot');
+//     src: url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.eot?#iefix') format('embedded-opentype'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.woff2') format('woff2'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.woff') format('woff'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.ttf') format('truetype'),
+//     url($fonts-base-path + 'Proxima_Nova/proxima_nova_extrabold.svg#proxima_nova_thextrabold') format('svg');
+//     font-weight: 900;
+//     font-style: normal
+// }
 
 
 // @font-face {

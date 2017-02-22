@@ -1,7 +1,7 @@
 import 'swiper';
 // import PhotoSwipe from 'vendors/photoswipe.min.js';
 // import PhotoSwipeUI_Default from 'vendors/photoswipe-ui-default.min.js';
-import { PhotoSwipe, PhotoSwipe_init } from 'vendors/photoswipe-init.js';
+// import { PhotoSwipe, PhotoSwipe_init } from 'vendors/photoswipe-init.js';
 
 module.exports = function(){
 
@@ -31,7 +31,7 @@ module.exports = function(){
 
     // if swiper wrapper hasClass site-gallery - init that
     var $baseSliderinstance = $('.base-slider__instance_default');
-    var $baseSliderGallery = $baseSliderinstance.find('.site-gallery'); 
+    var $baseSliderGallery = $baseSliderinstance.find('.site-gallery');
     // console.log($('.site-gallery',$baseSliderinstance).length);
   // console.log(PhotoSwipe);
     // if($baseSliderGallery.length) {

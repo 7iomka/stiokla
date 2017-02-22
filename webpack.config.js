@@ -177,7 +177,13 @@ let webpackConfig = {
           "_": "underscore",
           "domready": "domready"
       }),
-      new UglifyJSPlugin()
+      new UglifyJSPlugin({
+        compress: !isDevelopment,
+        mangle: !isDevelopment,
+        beautify: isDevelopment,
+        sourceMap: isDevelopment,
+        
+      })
       //  new webpack.ResolverPlugin(new ComponentDirectoryPlugin(true)) // resolve require('components/demo') as components/demo/demo.js || index.js
     ],
     // list of additional plugins

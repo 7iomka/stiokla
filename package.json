@@ -1,5 +1,5 @@
 {
-  "name": "stiokla-new",
+  "name": "Politek",
   "version": "0.1.1",
   "description": "Modular frontend",
   "keywords": [
@@ -8,22 +8,20 @@
     "library"
   ],
   "homepage": "https://github.com/7iomka/stiokla.git",
-  "bugs": {
-    "url": "https://github.com/7iomka/stiokla.git/issues"
-  },
+  "bugs": "https://github.com/7iomka/stiokla.git/issues",
   "license": "SEE LICENSE IN LICENSE",
   "author": "7iomka",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/24ways/frontend.git"
+    "url": "https://github.com/7iomka/stiokla.git"
   },
   "main": "fractal.js",
   "scripts": {
     "prestart": "npm install",
-    "start": "gulp start",
-    "build": "gulp build",
-    "dev": "gulp dev ",
-    "publish": "gulp publish",
+    "start": "node_modules/.bin/gulp start",
+    "build": "node_modules/.bin/gulp build",
+    "dev": "node_modules/.bin/gulp dev ",
+    "publish": "node_modules/.bin/gulp publish",
     "test": "webpack --watch"
   },
   "babel": {

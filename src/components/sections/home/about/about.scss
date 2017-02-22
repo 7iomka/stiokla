@@ -1,0 +1,61 @@
+.p-section--about {
+  background-color: $base-color--primary;
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+  color: white;
+
+  &:before {
+    content: "О Нас";
+    position: absolute;
+    color: #1c48a0;
+    font-size: 350px;
+    margin-left: 22%;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    color: white;
+    text-align: center;
+    @include media(">=lg") {
+      margin: 0;
+      text-align: left;
+    };
+  }
+
+
+  .section-title-area {
+    @include media(">=lg") {
+      padding-left: 19px;
+    };
+  }
+
+  .list-group {
+    margin: -15px 0;
+  }
+
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 11px auto;
+    // justify-content: center;
+    align-items: center;
+    @include media(">=lg") {
+      margin: -28px -22px -28px 11px;
+    };
+  }
+
+  .btn-item {
+      margin: 20px 11px;
+      @include media("<510px") {
+        margin: 8px 10px;
+      };
+  }
+
+
+}

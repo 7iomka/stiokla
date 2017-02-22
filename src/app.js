@@ -6,33 +6,45 @@
 
 /// import actions
 
-  import siteGallery from './components/common/_site-gallery/site-gallery.js';
 
-	import './components/common/accordion/accordion.js';
-	import './components/common/base-slider/base-slider.js';
+
+
+  // import siteGallery from './components/common/_site-gallery/site-gallery.js';
+  // import productsGallery from './components/common/product-group-item/product-group-item.js';
+
+	// import './components/common/accordion/accordion.js';
+	// import './components/common/base-slider/base-slider.js';
 	import './components/common/button/button.js';
-	import './components/common/calendar/calendar.js';
-	import './components/common/gallery-slider/gallery-slider.js';
-	import './components/common/goup/goup.js';
-	import './components/common/news-list/news-list.js';
-	import './components/common/product-group-item/product-group-item.js';
-	import './components/common/responsive-table/responsive-table.js';
-	import './components/common/spinner/spinner.js';
-	import './components/common/video-review/video-review.js';
-	import './components/global/navigation/navigation.js';
+	// import './components/common/calendar/calendar.js';
+	// import './components/common/gallery-slider/gallery-slider.js';
+	// import './components/common/goup/goup.js';
+	// import './components/common/news-list/news-list.js';
+  //
+	// import './components/common/responsive-table/responsive-table.js';
+	// import './components/common/spinner/spinner.js';
+	// import './components/common/video-review/video-review.js';
+	// import './components/global/navigation/navigation.js';
+	// import './components/sections/about/about-reviews/about-reviews.js';
+	// import './components/sections/cart/cart-items/cart-items.js';
+	// import './components/sections/cart/cart-totals/cart-totals.js';
+	// import './components/sections/catalog-3/product-group-actions.js';
+	// import './components/sections/certificates/certificates.js';
+	// import './components/sections/contacts/contacts/contacts.js';
+	// import './components/sections/dealers/dealers/dealers.js';
+	// import './components/sections/gosts/gosts-list/gosts-list.js';
+	// import './components/sections/terms/terms-description/terms-description.js';
 
 
 
-
-
-  import './components/common/accordion/accordion-init.js';
+  //
+  // import './components/common/accordion/accordion-init.js';
 
 
 
 // init actions
 domready(function () {
   const publicApi = {
-    siteGallery: siteGallery.init()
+    
   }
 
   exports.publicApi =  {

@@ -13,6 +13,9 @@
 @import 'sizes.json';
 @import 'spaces.json';
 
+
+$base-font: $font-family;
+
 $base-color--primary: palette(primary);
 $base-color--secondary: palette(secondary);
 
